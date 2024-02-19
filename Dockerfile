@@ -8,11 +8,6 @@ RUN apt-get update && \
 # Install PHP extensions
 RUN docker-php-ext-install ctype curl dom fileinfo filter mbstring pdo session xml
 
-# Configure Nginx
-RUN rm /etc/nginx/sites-enabled/default
-COPY nginx-site.conf /etc/nginx/sites-available/site.conf
-RUN ln -s /etc/nginx/sites-available/site.conf /etc/nginx/sites-enabled/site.conf
-
 # Set the working directory
 WORKDIR /var/www
 
