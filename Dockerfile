@@ -6,7 +6,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install ctype curl dom fileinfo filter mbstring pdo session xml
+RUN docker-php-ext-install ctype curl dom fileinfo filter mbstring pdo pdo_mysql session xml
 
 # Set the working directory
 WORKDIR /var/www
