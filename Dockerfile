@@ -9,7 +9,7 @@ RUN apt-get update && \
 RUN docker-php-ext-install ctype curl dom fileinfo filter mbstring pdo pdo_mysql session xml intl gd
 
 # Set the working directory
-WORKDIR /var/www
+WORKDIR /var/www/ludwig
 
 EXPOSE 9000
 CMD ["php-fpm"]
